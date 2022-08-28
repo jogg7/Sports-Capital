@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+/*background photo*/
+.homeheader{
+
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(sports2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+/*sub menu*/
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/*adjusts baskteball logo size*/
+nav img{
+    width: 250px;
+}
+
+/* aligns submenu to right side*/
+.nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+
+/*alignsa submenu next to each other*/
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    
+}
+
+/*makes submenu text white and chnages the font size*/
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+/*for lines under submeanu and make them active*/
+.nav-links ul li::after{ 
+    content: ' ';
+    width: 0%;
+    height: 2px;
+    background: #f44;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+/*makes line appear when cursor is over submenu*/
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+/*main text on home page*/
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+
+/*chnages size and color of Title*/
+.text-box h1{
+    font-size: 100px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+
+/*chnage size and color of paragraph under title*/
+.text-box p{
+    font-size: 25px;
+    color: #fff;
+    margin: 10px 0 40px;
+
+}
+
+/*puts box around visit us for more on homepage*/
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 14px;
+    padding: 12px 34px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+/* animates button*/
+.hero-btn:hover{
+    border: 1px solid #f44;
+    background: #f44;
+    transition: 0.7s;
+}
+
+/*fix website for small screens */
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/*info*/
+
+/*moves text under banner on homepage and centers*/
+.info{
+    width: 90%;
+    padding-top: 100px;
+    text-align: center;
+    margin: auto;
+    padding-left: 20px;
+    
+}
+
+/*chnages size of title under banner */
+h1{
+    font-size: 60px;
+    font-weight: 600px;
+}
+
+/*chnages text under title*/
+p{
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 22px;
+    padding: 10px;
+    line-height: 40px;
+}
+
+/*to make 3 columns under banner*/
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*to make box around 3 columns*/
+.sports-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+/*words inside boxes*/
+h3{
+    font-weight: 600;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+/*SHAWDOW FOR BOXES (  not working) */
+.sports-col:hover{
+    box-shadow: 0 0 20px 0px rgba(rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), 0.2);
+}
+
+/*make columns look good on phone*/
+@media(max-width: 700px){
+
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*text under 3 columns*/
+.more_sports_league{
+    text-align: center;
+    width: 80%;
+    padding-top: 50PX;
+    margin: auto;
+}
+
+/*pictures*/
+.sports_league_col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    border-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sports_league_col img{
+    width: 90%;
+    display: block;
+}
+/*makes image clear until mouse hovers*/
+.layer{
+    height: 100%;
+    width: 90%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: transparent;
+    transition: 0.5s;
+}
+
+/*make red appear when mouse is on picture*/
+.layer:hover{
+    background: rgb(226, 0, 0, 0.7);
+}
+
+/*chnages text on pictures*/
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/*make text appear on image whne mouse in on*/
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*facilities*/
+
+
+.coming_soon{
+    width: 80;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.coming_soon_col{
+    flex-basis: 31%;
+    text-align: left;
+    border-radius: 10;
+    margin-bottom: 5%;
+}
+
+/*adjusts images size*/
+.coming_soon_col img{
+    border-radius: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 90%;
+}
+
+/*subtext*/
+.coming_soon_col p{
+    padding: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.coming_soon_col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 30px;
+}
+
+
+
+
+/* Footer */
+
+
+/*makes footer look good*/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: rgb(180, 180, 180);
+}
+
+/*adjusts text*/
+.footer h4{
+    margin-bottom: 25px;
+    font-size: 50px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/*linkedin picture*/
+.icons{
+
+    width: 2%;
+    margin: 0 13px;
+    padding: 200px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
